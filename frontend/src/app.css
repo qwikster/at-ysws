@@ -1,0 +1,9 @@
+:root {
+    /* VARIABLES */
+    --primary: #333333;
+
+}
+
+.app-body {
+    color: inherit;
+}
