@@ -11,8 +11,8 @@ export default {
     adapter: adapter({
       pages: "build",
       assets: "build",
-      fallback: undefined,
-      strict: true
+      fallback: "app.html",
+      strict: false
     })
   }
 };
