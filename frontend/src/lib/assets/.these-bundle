@@ -1,0 +1,1 @@
+note to self: `$lib/assets/logo.svg`, for Vite to handle, will not be cached on new builds, use inside components
