@@ -1,9 +1,74 @@
+@property --bg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #121714;
+}
+
+@property --fg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #D8E2E9;
+}
+
 :root {
     /* VARIABLES */
-    --primary: #333333;
+    transition: --bg 0.2s ease, --fg 0.06s ease;
 
+    --fg: #D8E2E9;
+    --bg: #121714;
+    --pm: #14F5AA;
+    --sc: #FF499E;
+    --ac: #FFC60A;
+    --hc: #ec3750;
+
+    --dim: #187656;
+    --dimmer: #124332;
+
+    --font-header: 1.6rem;
+    --font-body: 1.2rem;
+
+    margin: 2.6rem 5rem;
+    background-color: var(--bg);
+    color: var(--bg);
+    border-color: var(--fg);
+}
+
+[data-theme="dark"] {
+  --bg: #D8E2E9;
+  --fg: #121714;
+}
+
+* {
+    font-size: 100%;
+    line-height: 1.25;
+    font-family: monospace;
 }
 
 .app-body {
     color: inherit;
+}
+
+span {
+    padding-bottom: 4px;
+}
+
+.stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #121714,
+    #121714 20px,
+    #1B221E 20px,
+    #1B221E 40px
+  );
+  animation: stripes 5s linear infinite;
+  background-size: 56.57px 56.57px;
+}
+
+@keyframes stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 56.57px 0;
+  }
 }
