@@ -1,10 +1,22 @@
-from sqlalchemy.ext.asyncio import create_async_engine
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase
+from typing_extensions import AsyncGenerator
 
-from at.config import get_config
+from at.config import config, secret
 
 
 class Base(DeclarativeBase):
     pass
 
-engine = create_async_engine(get_config()["db_url"], echo = get_config()["devmode"])
+engine = create_async_engine(secret().db_url, echo = config().devmode)
+async_session = async_sessionmaker(engine, expire_on_commit = False)
+
+async def get_db() -> AsyncGenerator[AsyncSession, None]:
+    async with async_session() as session:
+        try:
+            yield session
+        except Exception:
+            await session.rollback()
+            raise
+        finally:
+            await session.close()
