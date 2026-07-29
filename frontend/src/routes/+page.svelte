@@ -114,7 +114,7 @@
         min-height: 110vh;
         background-color: rgb(from var(--bg) r g b / 50%);
         backdrop-filter: blur(10px);
-        justify-self: center;
+        margin-inline: auto;
 
         padding: var(--pad-v) 0px;
 
@@ -231,13 +231,13 @@
     }
 
     @media (width < 800px) {
-        .page {
-            width: 120%;
+        :root {
+            margin: 1rem;
         }
     }
     @media (width < 500px) {
-        .page {
-            width: 140%;
+        :root {
+            margin: 0.2rem;
         }
     }
 </style>

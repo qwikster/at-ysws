@@ -12,6 +12,7 @@
                     <span class="item"><at>@</at> new Requests library</span>
                     <span class="item"><at>@</at> HTTP client or server</span>
                     <span class="item"><at>@</at> custom HTTP router</span>
+                    <span>meow</span>
                 </div>
             </div>
             <div class="tile-part">
@@ -61,6 +62,22 @@
         border-radius: 1rem;
     }
 
+    .tile-body {
+        font-size: var(--font-body);
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .tile-part {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .tile-part:last-child {
+        flex-grow: 1;
+    }
+
     .tile-head {
         text-align: center;
         font-weight: 800;
@@ -78,17 +95,6 @@
         );
     }
 
-    .tile-body {
-        font-size: var(--font-body);
-        display: flex;
-        flex-direction: column;
-    }
-
-    .tile-part {
-        display: flex;
-        flex-direction: row;
-    }
-
     .tile-part:first-child {
         border-bottom: 0.2rem dashed var(--fg);
     }
@@ -96,7 +102,6 @@
     .tile-l {
         display: flex;
         align-items: center;
-        height: 100%;
         border-right: 0.2rem dashed var(--fg);
         padding: 0rem 0.3rem 0rem 0.2rem;
         font-weight: 500;
