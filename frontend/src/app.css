@@ -1,47 +1,41 @@
-@property --bg {
-  syntax: '<color>';
-  inherits: true;
-  initial-value: #121714;
-}
-
-@property --fg {
-  syntax: '<color>';
-  inherits: true;
-  initial-value: #D8E2E9;
-}
-
 :root {
     /* VARIABLES */
-    transition: --bg 0.2s ease, --fg 0.06s ease;
-
+    --bg: #0D1B2A;
     --fg: #D8E2E9;
-    --bg: #121714;
     --pm: #14F5AA;
-    --sc: #FF499E;
-    --ac: #FFC60A;
+    --ac: #FF499E;
+    --sc: #FFC60A;
     --hc: #ec3750;
 
     --dim: #187656;
     --dimmer: #124332;
 
+    --font-super: 2rem;
     --font-header: 1.6rem;
     --font-body: 1.2rem;
+    --font-ascii: 0.5rem;
+
+    --border-lg: 0.35rem;
+    --border-sm: 0.24rem;
+
+    --pad-h: 0.8rem;
+    --pad-v: 0.6rem;
+    --pad-s: 0.4rem;
+
+    --gap-s: 0.8rem;
+    --gap-l: 1.6rem;
 
     margin: 2.6rem 5rem;
-    background-color: var(--bg);
-    color: var(--bg);
-    border-color: var(--fg);
-}
-
-[data-theme="dark"] {
-  --bg: #D8E2E9;
-  --fg: #121714;
+    background-color: var(--fg);
+    color: var(--fg);
+    border-color: var(--bg);
 }
 
 * {
     font-size: 100%;
-    line-height: 1.25;
+    line-height: 1.2;
     font-family: monospace;
+    box-sizing: border-box;
 }
 
 .app-body {
@@ -49,7 +43,47 @@
 }
 
 span {
-    padding-bottom: 4px;
+    padding-bottom: 0.15rem;
+}
+
+h1 {
+    font-size: var(--font-super);
+    text-shadow: 1px 1px 0px var(--ac);
+    color: var(--fg);
+    /* border-left: var(--border-lg) solid var(--ac);
+    padding-left: var(--pad-h); */
+    margin-top: 0px;
+    margin-bottom: var(--pad-v);
+}
+
+h2 {
+    font-size: var(--font-header);
+    font-weight: 500;
+    text-decoration: underline;
+    margin-top: var(--pad-v);
+    margin-bottom: 0px;
+}
+
+p {
+    font-size: var(--font-header);
+    font-weight: 400;
+    margin-top: var(--pad-s);
+        margin-bottom: 0px;
+    padding-bottom: var(--pad-s);
+}
+
+hr {
+    border-color: var(--dimmer);
+    border-style: solid;
+    opacity: 0.5;
+    margin-block: var(--gap-l);
+}
+
+at {
+    font-weight: 800;
+    color: var(--ac);
+    font-size: 0.8rem;
+    transform: translateY(0.1rem);
 }
 
 .stripes {
