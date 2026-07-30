@@ -1,0 +1,96 @@
+[
+  {
+    "name": "HTTP",
+    "ys": [
+      "new Requests library",
+      "HTTP client or server",
+      "custom HTTP router"
+    ],
+    "ws": [
+      "wifi router [10h]"
+    ]
+  },
+  {
+    "name": "TCP/IP",
+    "ys": [
+      "JSON chat app",
+      "new protocol atop TCP",
+      "multiplayer game engine"
+    ],
+    "ws": [
+      "rPi zero 2w [4h]",
+      "rPi 5 4gb [25h]"
+    ]
+  },
+  {
+    "name": "SMTP/IMAP",
+    "ys": [
+      "custom email client",
+      "app controlled via emails",
+      "home automation mail sender"
+    ],
+    "ws": [
+      "1yr Purelymail [3h]",
+      "1yr ProtonMail [12h]"
+    ]
+  },
+  {
+    "name": "DNS",
+    "ys": [
+      "`dig`-like tool",
+      "alternative root server",
+      "DDNS updater client"
+    ],
+    "ws": [
+      "domain grant [3h]"
+    ]
+  },
+  {
+    "name": "Wired (USB/CANBUS/*)",
+    "ys": [
+      "firmware flash tool",
+      "usb-c debug board",
+      "3D printer touchpad"
+    ],
+    "ws": [
+      "$5 parts grant [1h]",
+      "rPi starter kit [4h]"
+    ]
+  },
+  {
+    "name": "TLS/SSL",
+    "ys": [
+      "password validation library",
+      "cryptography implementation"
+    ],
+    "ws": [
+      "YubiKey [10h]",
+      "1yr Bitwarden [4h]"
+    ]
+  },
+  {
+    "name": "FTP/SSH/SFTP",
+    "ys": [
+      "file/video/media server",
+      "interactive ssh game"
+    ],
+    "ws": [
+      "128gb flash drive [4h]",
+      "2tb hard drive [10h]",
+      "1tb SSD [30h]"
+    ]
+  },
+  {
+    "name": "Networking/802.X",
+    "ys": [
+      "libre ethernet router",
+      "custom packet format",
+      "RF monitoring/debugging tool"
+    ],
+    "ws": [
+      "ethernet switch [8h]",
+      "$100 server grant [20h]",
+      "network card [8h]"
+    ]
+  }
+]
