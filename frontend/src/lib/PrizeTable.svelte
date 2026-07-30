@@ -1,8 +1,8 @@
 <script>
   import { onMount } from "svelte";
-  let ys = $state([])
+  import ys from '$lib/assets/ys.json';
 
-  onMount(async () => {
+  /*onMount(async () => {
     try {
       const res =  await fetch("/ys.json");
       ys = await res.json()
@@ -10,6 +10,7 @@
       console.error("Failed to load YS items:", error)
     }
   })
+ */
 </script>
 
 <div class="tiles">
