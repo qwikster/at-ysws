@@ -1,47 +1,45 @@
 <script>
+  import { onMount } from "svelte";
+  let ys = $state([])
 
+  onMount(async () => {
+    try {
+      const res =  await fetch("/ys.json");
+      ys = await res.json()
+    } catch (error) {
+      console.error("Failed to load YS items:", error)
+    }
+  })
 </script>
 
 <div class="tiles">
-    <div class="tile">
-        <span class="tile-head">HTTP</span>
-        <div class="tile-body">
-            <div class="tile-part">
-                <div class="tile-l"> YS </div>
-                <div class="tile-r">
-                    <span class="item"><at>@</at> new Requests library</span>
-                    <span class="item"><at>@</at> HTTP client or server</span>
-                    <span class="item"><at>@</at> custom HTTP router</span>
-                    <span>meow</span>
+    {#await ys}
+        <div>loading...</div>
+    {:then}
+        {#each ys as tile}
+            <div class="tile">
+                <span class="tile-head">{tile.name}</span>
+                <div class="tile-body">
+                    <div class="tile-part">
+                        <div class="tile-l"> YS </div>
+                        <div class="tile-r">
+                            {#each tile.ys as example}
+                                <span class="item"><at>@</at> {example} </span>
+                            {/each}
+                        </div>
+                    </div>
+                    <div class="tile-part">
+                        <div class="tile-l tlb"> WS </div>
+                        <div class="tile-r">
+                            {#each tile.ws as prize}
+                                <span class="item"><at>@</at> {prize} </span>
+                            {/each}
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="tile-part">
-                <div class="tile-l tlb"> WS </div>
-                <div class="tile-r">
-                    <span class="item"><at>@</at> domain grant [3h]</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tile">
-        <span class="tile-head">TCP/IP</span>
-        <div class="tile-body">
-            <div class="tile-part">
-                <div class="tile-l"> YS </div>
-                <div class="tile-r">
-                    <span class="item"><at>@</at> JSON chat app</span>
-                    <span class="item"><at>@</at> new protocol atop TCP</span>
-                </div>
-            </div>
-            <div class="tile-part">
-                <div class="tile-l tlb"> WS </div>
-                <div class="tile-r">
-                    <span class="item"><at>@</at> Ethernet patch cables [2h]</span>
-                    <span class="item"><at>@</at> Raspberry Pi Zero 2 W [10h]</span>
-                </div>
-            </div>
-        </div>
-    </div>
+        {/each}
+    {/await}
 </div>
 
 <style>

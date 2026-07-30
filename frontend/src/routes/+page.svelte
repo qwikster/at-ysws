@@ -218,7 +218,6 @@
         user-select: text;
     }
 
-
     @keyframes slideInTop {
         from {
             transform: translateY(30vh);

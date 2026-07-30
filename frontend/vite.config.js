@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': 'http://localhost:8000'
-    }
+    },
+    allowedHosts: ["at.qwik.top"]
   },
-	allowedHosts: ["at.qwik.top"]
 });
