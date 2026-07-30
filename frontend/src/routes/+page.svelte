@@ -1,6 +1,7 @@
 <script>
     import hc from "$lib/assets/hc.svg"
     import PrizeTable from "$lib/PrizeTable.svelte";
+    import Questions from "$lib/Questions.svelte";
 
     /* let dmtxt = $state("dark mode")
     function darkmode() {
@@ -17,7 +18,7 @@
         <div class="header-item left">
             <div class="hc">
                 <img class="hc-logo" src="{hc}" width="var(--font-header);" alt="Hack Club">
-                <span class="hc-text">Hack Club</span>
+                <span class="hc-text"><a href="https://hack.club">Hack Club</a></span>
             </div>
             <span>Request for Comments: 727</span>
             <span>Category: YSWS</span>
@@ -64,11 +65,39 @@
         <div class="callout-name"></div>
     </div>
     <div class="body">
-        <h1># Abstract</h1>
+        <h1>0. Abstract</h1>
         <h2>You Ship:</h2>
-        <p>A project that uses a protocol directly, with no library to translate.</p>
+        <p>A project that uses or implements a protocol without a library.</p>
         <h2>We Ship:</h2>
-        <p>Prizes chosen to match!</p>
+        <p>Free prizes (!!!) related to your project!</p>
+    </div>
+    <div class="callout">
+        sign up
+    </div>
+    <div class="body">
+        <hr>
+        <h1>1. You Ship</h1>
+        <p>
+            Find a project idea that moves information between two pieces of tech.
+            Then, instead of relying on a library, learn how a protocol works and
+            implement it yourself!
+        </p>
+        <p>
+            Some examples of common protocols and things you might make with them:
+        </p>
+        <PrizeTable/>
+        <p>
+            Track the time you spent building with
+            <a href="https://hackatime.hackclub.com" target="_blank">Hackatime</a>
+            and use version control (like GitHub) to track your progress over time.
+        </p>
+        <hr>
+        <h1>2. We Ship</h1>
+        <p>
+            Write a README for people to see, package your project, submit it here,
+            and share it with the world! Then, spend the time you've logged on your
+            pick of prizes from the shop, and we'll send them to you for free:
+        </p>
     </div>
     <div class="callout">
         <div class="track">
@@ -76,7 +105,7 @@
                 <div class="prize-art">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;########
        ##------##
-#######-.##+-.-#######
+ #######-.##+-.-#######
 ###---##-.####.-##---###
 #++#+--##+----+##--+#++#
 #+--+#+-+######+-+#+--+#
@@ -90,18 +119,29 @@
                     1yr Purelymail
                 </div>
             </div>
-        <div class="prize">
-            meow
-        </div>
+            <div class="prize">
+                meow
+            </div>
         </div>
     </div>
     <div class="body">
-        <h1>1. You Ship</h1>
-        <p>Pick a protocol, or choose your own:</p>
-
-        <PrizeTable/>
+        <hr style="margin-top: var(--pad-s);">
+        <h1>3. Questions</h1>
+        <Questions/>
+        <p><em>
+            More questions? Ask in
+            <a href="https://hackclub.enterprise.slack.com/archives/C0BGPHJV9P1" target="_blank">#at-ysws</a>
+            or email @
+            <a href="mailto:beans@beans.beans">ADD@EMAIL.HERE</a>
+        </em></p>
+        <hr>
+        <h1>4. Sign Up</h1>
+        <p>Sound interesting? Sign in with Hack Club and you'll get an email when we're ready for you to start building.</p>
     </div>
-
+    <div class="callout">
+        sign up
+    </div>
+    made with love etc
 </div>
 
 <style>
@@ -111,15 +151,13 @@
         gap: var(--gap-s);
         max-width: 75rem;
         width: 100%;
-        min-height: 110vh;
         background-color: rgb(from var(--bg) r g b / 50%);
         backdrop-filter: blur(10px);
         margin-inline: auto;
 
         padding: var(--pad-v) 0px;
 
-        transform: translateY(30vh);
-        opacity: 0.5;
+        opacity: 0.2;
         animation: slideInTop 0.6s ease-out both;
 
         border: var(--border-sm) var(--bg) inset;
@@ -170,7 +208,7 @@
         border-block: var(--border-lg) outset var(--ac);
         border-inline-color: transparent;
         padding: var(--pad-v) 0px;
-        margin-bottom: var(--gap-s)
+        margin-bottom: var(--gap-s);
     }
 
     .callout-name {
@@ -218,13 +256,20 @@
         user-select: text;
     }
 
+    .list {
+        display: flex;
+        align-items: center;
+        font-size: var(--font-header);
+        gap: var(--gap-s);
+        line-height: 1.25;
+        margin: --pad-s 0px;
+    }
+
     @keyframes slideInTop {
         from {
-            transform: translateY(30vh);
-            opacity: 0.5;
+            opacity: 0.2;
         }
         to {
-            transform: translateY(0px);
             opacity: 1;
         }
     }

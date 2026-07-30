@@ -49,7 +49,7 @@
         flex-wrap: wrap;
         width: 100%;
         gap: var(--gap-l);
-        margin-top: var(--pad-v);
+        margin: var(--pad-h) 0px;
     }
 
     .tile {

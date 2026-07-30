@@ -67,9 +67,10 @@ h2 {
 p {
     font-size: var(--font-header);
     font-weight: 400;
-    margin-top: var(--pad-s);
-        margin-bottom: 0px;
+    margin-top: var(--pad-v);
+    margin-bottom: 0px;
     padding-bottom: var(--pad-s);
+    line-height: 1.25;
 }
 
 hr {
@@ -82,8 +83,22 @@ hr {
 at {
     font-weight: 800;
     color: var(--ac);
-    font-size: 0.8rem;
-    transform: translateY(0.1rem);
+    font-size: 0.75em;
+}
+
+a {
+    color: var(--hc);
+    font-weight: 600;
+    transition: 0.2s ease all;
+}
+
+a:hover {
+    color: var(--ac);
+}
+
+a:active {
+    color: var(--sc);
+    text-decoration-style: dashed;
 }
 
 .stripes {
