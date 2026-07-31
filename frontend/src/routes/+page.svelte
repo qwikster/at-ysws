@@ -1,5 +1,6 @@
 <script>
     import hc from "$lib/assets/hc.svg"
+    import Login from "$lib/Login.svelte";
     import PrizeTable from "$lib/PrizeTable.svelte";
     import Questions from "$lib/Questions.svelte";
 
@@ -72,7 +73,7 @@
         <p>Free prizes (!!!) related to your project!</p>
     </div>
     <div class="callout">
-        sign up
+        <Login/>
     </div>
     <div class="body">
         <hr>
@@ -136,10 +137,13 @@
         </em></p>
         <hr>
         <h1>4. Sign Up</h1>
-        <p>Sound interesting? Sign in with Hack Club and you'll get an email when we're ready for you to start building.</p>
+        <p>
+            Sound interesting? Sign up with Hack Club Auth and you'll get
+            an email when we're ready for you to start building!!
+        </p>
     </div>
     <div class="callout">
-        sign up
+        <Login/>
     </div>
     made with love etc
 </div>
