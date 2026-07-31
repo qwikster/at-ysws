@@ -65,6 +65,18 @@
         border-radius: 0.8rem 0.8rem 0px 0px;
         border-bottom: 0.2rem dashed var(--fg);
 
+        overflow: hidden;
+        position: relative;
+    }
+
+    .tile-head::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+
         background: repeating-linear-gradient(
           -45deg,
           var(--dim),
@@ -72,6 +84,9 @@
           var(--dimmer) 10px,
           var(--dimmer) 20px
         );
+
+        filter: blur(5px);
+        z-index: -1;
     }
 
     .tile-l {
