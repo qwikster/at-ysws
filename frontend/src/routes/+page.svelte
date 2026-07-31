@@ -151,6 +151,7 @@
         commit <a href="https://github.com/qwikster/at-ysws/commit/{version}" target="_blank">{version}</a> |
         made with <at>♥</at> by Hack Club!
     </span>
+    <span class="blank">this space intentionally left blank</span>
 </div>
 
 <style>
@@ -266,6 +267,11 @@
     }
 
     .love {
+        text-align: center;
+        margin-top: 30vh;
+    }
+
+    .blank {
         text-align: center;
     }
 
