@@ -1,0 +1,45 @@
+[
+  {
+    "q": "I'm new to programming, where do I start?",
+    "a": [
+      "This might not be the easiest starter program, but we'll be running workshops throughout!"
+    ]
+  },
+  {
+    "q": "Can I use AI?",
+    "a": [
+      "Yes, but only to a point. You may use AI for debugging and research, but if it's clear you don't understand the code that has been written or it's clearly written mostly by an LLM, your project will be rejected."
+    ]
+  },
+  {
+    "q": "Can I pick another protocol?",
+    "a": [
+      "Yes!! As long as it moves data around!",
+      "You're even welcome to build your own."
+    ]
+  },
+  {
+    "q": "Can I get prizes from two categories?",
+    "a": [
+      "yes! they're just organized by theme!"
+    ]
+  },
+  {
+    "q": "Is this really free? How?",
+    "a": [
+      "Hack Club is a nonprofit funded by generous people and companies!"
+    ]
+  },
+  {
+    "q": "When does @ end?",
+    "a": [
+      "TBD"
+    ]
+  },
+  {
+    "q": "Can I submit hours from another event to @?",
+    "a": [
+      "No. Double dipping is not allowed and will result in you banned from future Hack Club events."
+    ]
+  }
+]
