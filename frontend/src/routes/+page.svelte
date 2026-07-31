@@ -79,7 +79,7 @@
     </div>
     <div class="body">
         <hr>
-        <h1>1. You Ship</h1>
+        <h1>1. Building a Project</h1>
         <p>
             Find a project idea that moves information between two pieces of tech.
             Then, instead of relying on a library, learn how a protocol works and
@@ -95,7 +95,7 @@
             and use version control (like GitHub) to track your progress over time.
         </p>
         <hr>
-        <h1>2. We Ship</h1>
+        <h1>2. Shipping</h1>
         <p>
             Write a README for people to see, package your project, submit it here,
             and share it with the world! Then, spend the time you've logged on your

@@ -18,17 +18,26 @@
     --border-lg: 0.35rem;
     --border-sm: 0.24rem;
 
-    --pad-h: 0.8rem;
-    --pad-v: 0.6rem;
+    --pad-h: 1rem;
+    --pad-v: 0.8rem;
     --pad-s: 0.4rem;
 
-    --gap-s: 0.8rem;
+    --gap-s: 0.6rem;
     --gap-l: 1.6rem;
 
     margin: 2.6rem 5rem;
     background-color: var(--fg);
     color: var(--fg);
     border-color: var(--bg);
+}
+
+@media (width < 1000px) {
+    :root {
+        --font-super: 2rem;
+        --font-header: 1.25rem;
+        --font-body: 1.1rem;
+        --font-ascii: 0.4rem;
+    }
 }
 
 * {
@@ -60,14 +69,14 @@ h2 {
     font-size: var(--font-header);
     font-weight: 500;
     text-decoration: underline;
-    margin-top: var(--pad-v);
+    margin-top: var(--gap-s);
     margin-bottom: 0px;
 }
 
 p {
     font-size: var(--font-header);
     font-weight: 400;
-    margin-top: var(--pad-v);
+    margin-top: var(--gap-s);
     margin-bottom: 0px;
     padding-bottom: var(--pad-s);
     line-height: 1.25;
