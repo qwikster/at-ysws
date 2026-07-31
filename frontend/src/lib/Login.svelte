@@ -26,7 +26,7 @@
     }
 
     .rsvp {
-        width: 50rem;
+        max-width: 70vw;
         font-size: var(--font-super);
         font-family: monospace;
         font-weight: 800;
@@ -35,6 +35,12 @@
         border-radius: 1rem 0rem 0rem 1rem;
         text-align: center;
         color: var(--pm);
+    }
+
+    @media (width < 600px) {
+        .rsvp {
+            font-size: var(--font-header);
+        }
     }
 
     .rsvp::placeholder {

@@ -1,4 +1,6 @@
 <script>
+    const version = __APP_VERSION__;
+
     import hc from "$lib/assets/hc.svg"
     import Login from "$lib/Login.svelte";
     import PrizeTable from "$lib/PrizeTable.svelte";
@@ -129,7 +131,7 @@
         <hr style="margin-top: var(--pad-s);">
         <h1>3. Questions</h1>
         <Questions/>
-        <p><em>
+        <p style="text-align: center;"><em>
             More questions? Ask in
             <a href="https://hackclub.enterprise.slack.com/archives/C0BGPHJV9P1" target="_blank">#at-ysws</a>
             or email @
@@ -145,7 +147,10 @@
     <div class="callout">
         <Login/>
     </div>
-    made with love etc
+    <span class="love">
+        commit <a href="https://github.com/qwikster/at-ysws/commit/{version}" target="_blank">{version}</a> |
+        made with <at>♥</at> by Hack Club!
+    </span>
 </div>
 
 <style>
@@ -260,13 +265,8 @@
         user-select: text;
     }
 
-    .list {
-        display: flex;
-        align-items: center;
-        font-size: var(--font-header);
-        gap: var(--gap-s);
-        line-height: 1.25;
-        margin: --pad-s 0px;
+    .love {
+        text-align: center;
     }
 
     @keyframes slideInTop {
