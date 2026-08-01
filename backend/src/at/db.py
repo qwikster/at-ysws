@@ -8,7 +8,11 @@ from at.config import config, secret
 class Base(DeclarativeBase):
     pass
 
-engine = create_async_engine(secret().db_url, echo = config().devmode)
+url = secret().db_url
+if (url) is None:
+    raise(ValueError("Databse URL is not set"))
+else:
+    engine = create_async_engine(url, echo = config().devmode)
 async_session = async_sessionmaker(engine, expire_on_commit = False)
 
 async def get_db() -> AsyncGenerator[AsyncSession, None]:
