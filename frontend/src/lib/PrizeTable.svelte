@@ -22,6 +22,12 @@
                 <span class="tile-head">{tile.name}</span>
                 <div class="tile-body">
                     <div class="tile-part">
+                        <div class="tile-l"> ~? </div>
+                        <div class="tile-r">
+                            <span class="item"> {tile.what} </span>
+                        </div>
+                    </div>
+                    <div class="tile-part">
                         <div class="tile-l"> YS </div>
                         <div class="tile-r">
                             {#each tile.ys as example}
@@ -71,10 +77,12 @@
     .tile-part {
         display: flex;
         flex-direction: row;
+        border-bottom: 0.2rem dashed var(--fg);
     }
 
     .tile-part:last-child {
         flex-grow: 1;
+        border-bottom: none;
     }
 
     .tile-head {
@@ -107,10 +115,6 @@
 
         filter: blur(5px);
         z-index: -1;
-    }
-
-    .tile-part:first-child {
-        border-bottom: 0.2rem dashed var(--fg);
     }
 
     .tile-l {

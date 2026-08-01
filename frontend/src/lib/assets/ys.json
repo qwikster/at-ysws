@@ -1,6 +1,7 @@
 [
   {
     "name": "HTTP",
+    "what": "Web server requests",
     "ys": [
       "new Requests library",
       "HTTP client or server",
@@ -12,6 +13,7 @@
   },
   {
     "name": "TCP/IP",
+    "what": "Safe data delivery/routing",
     "ys": [
       "JSON chat app",
       "new protocol atop TCP",
@@ -24,6 +26,7 @@
   },
   {
     "name": "SMTP/IMAP",
+    "what": "Email reading and sending",
     "ys": [
       "custom email client",
       "app controlled via emails",
@@ -36,6 +39,7 @@
   },
   {
     "name": "DNS",
+    "what": "Translates URLs to IPs",
     "ys": [
       "`dig`-like tool",
       "alternative root server",
@@ -47,6 +51,7 @@
   },
   {
     "name": "Wired (USB/CANBUS/*)",
+    "what": "Power and data over wires",
     "ys": [
       "firmware flash tool",
       "usb-c debug board",
@@ -59,6 +64,7 @@
   },
   {
     "name": "TLS/SSL",
+    "what": "Encryption, auth, and security",
     "ys": [
       "password validation library",
       "cryptography implementation"
@@ -70,6 +76,7 @@
   },
   {
     "name": "FTP/SSH/SFTP",
+    "what": "Sends files/commands over a network",
     "ys": [
       "file/video/media server",
       "interactive ssh game"
@@ -82,6 +89,7 @@
   },
   {
     "name": "Networking/802.X",
+    "what": "Raw mechanics of Ethernet and WiFi",
     "ys": [
       "libre ethernet router",
       "custom packet format",

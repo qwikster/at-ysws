@@ -1,16 +1,6 @@
 <script>
   import { onMount } from "svelte";
   import faq from '$lib/assets/faq.json';
-
-  /*onMount(async () => {
-    try {
-      const res =  await fetch("/ys.json");
-      ys = await res.json()
-    } catch (error) {
-      console.error("Failed to load YS items:", error)
-    }
-  })
- */
 </script>
 
 <div class="tiles">

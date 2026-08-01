@@ -5,15 +5,6 @@
     import Login from "$lib/Login.svelte";
     import PrizeTable from "$lib/PrizeTable.svelte";
     import Questions from "$lib/Questions.svelte";
-
-    /* let dmtxt = $state("dark mode")
-    function darkmode() {
-      const root = document.documentElement;
-      const currentTheme = root.getAttribute('data-theme');
-      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      dmtxt = currentTheme + " mode"
-      root.setAttribute('data-theme', nextTheme);
-    }; */
 </script>
 
 <div class="page">
@@ -72,7 +63,7 @@
         <h2>You Ship:</h2>
         <p>A project that uses or implements a protocol without a library.</p>
         <h2>We Ship:</h2>
-        <p>Free prizes (!!!) related to your project!</p>
+        <p>A shop full of prizes related to networking protocols!</p>
     </div>
     <div class="callout">
         <Login/>
