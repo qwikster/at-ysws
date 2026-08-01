@@ -79,7 +79,29 @@
     </div>
     <div class="body">
         <hr>
-        <h1>1. Building a Project</h1>
+        <h1>1. What's a protocol?</h1>
+        <p style="font-size: var(--font-body);"><em><at>@</at>
+            skip this section if you already know!
+        </em></p>
+        <p>
+            A protocol is a <a href="https://xkcd.com/927" target="_blank">standardized</a>
+            set of formats, rules, and ways that define how data should be moved
+            between computers or softwares, allowing things made by different people
+            to talk between each other universally.
+        </p>
+        <p>
+            For example, HTTP defines a set of requests and a set of responses.
+            You might have heard of the 404 code - that's a response - and it might
+            show up when you send a GET request for a file that doesn't exist.
+        </p>
+        <p>
+            HTTP is built on top of several other protocols
+            (TCP -&gt; Ethernet -&gt; 802.11x, etc) that all work together to show you
+            anything on the modern internet, and everything else you use is built atop
+            other protocols.
+        </p>
+        <hr>
+        <h1>2. Building a Project</h1>
         <p>
             Find a project idea that moves information between two pieces of tech.
             Then, instead of relying on a library, learn how a protocol works and
@@ -95,7 +117,7 @@
             and use version control (like GitHub) to track your progress over time.
         </p>
         <hr>
-        <h1>2. Shipping</h1>
+        <h1>3. Shipping</h1>
         <p>
             Write a README for people to see, package your project, submit it here,
             and share it with the world! Then, spend the time you've logged on your
@@ -129,7 +151,7 @@
     </div>
     <div class="body">
         <hr style="margin-top: var(--pad-s);">
-        <h1>3. Questions</h1>
+        <h1>4. Questions</h1>
         <Questions/>
         <p style="text-align: center;"><em>
             More questions? Ask in
@@ -138,7 +160,7 @@
             <a href="mailto:beans@beans.beans">ADD@EMAIL.HERE</a>
         </em></p>
         <hr>
-        <h1>4. Sign Up</h1>
+        <h1>5. Sign Up</h1>
         <p>
             Sound interesting? Sign up with Hack Club Auth and you'll get
             an email when we're ready for you to start building!!
