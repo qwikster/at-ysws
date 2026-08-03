@@ -3,8 +3,18 @@
 
     import hc from "$lib/assets/hc.svg"
     import Login from "$lib/Login.svelte";
+    import Prizes from "$lib/Prizes.svelte";
     import PrizeTable from "$lib/PrizeTable.svelte";
     import Questions from "$lib/Questions.svelte";
+
+    /* let dmtxt = $state("dark mode")
+    function darkmode() {
+      const root = document.documentElement;
+      const currentTheme = root.getAttribute('data-theme');
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      dmtxt = currentTheme + " mode"
+      root.setAttribute('data-theme', nextTheme);
+    }; */
 </script>
 
 <div class="page">
@@ -63,7 +73,7 @@
         <h2>You Ship:</h2>
         <p>A project that uses or implements a protocol without a library.</p>
         <h2>We Ship:</h2>
-        <p>A shop full of prizes related to networking protocols!</p>
+        <p>Free prizes (!!!) related to your project!</p>
     </div>
     <div class="callout">
         <Login/>
@@ -116,29 +126,7 @@
         </p>
     </div>
     <div class="callout">
-        <div class="track">
-            <div class="prize">
-                <div class="prize-art">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;########
-       ##------##
- #######-.##+-.-#######
-###---##-.####.-##---###
-#++#+--##+----+##--+#++#
-#+--+#+-+######+-+#+--+#
-#+----+#+------+#+----+#
-#+---+####+--+####+---+#
-#+-+##+--++##++--+##+-+#
-####+--------------+####
-########################
-                </div>
-                <div class="prize-name">
-                    1yr Purelymail
-                </div>
-            </div>
-            <div class="prize">
-                meow
-            </div>
-        </div>
+        <Prizes/>
     </div>
     <div class="body">
         <hr style="margin-top: var(--pad-s);">
@@ -244,39 +232,6 @@
     .body {
         padding: 0px var(--pad-h);
         line-height: 1.2;
-    }
-
-    .track {
-        display: flex;
-        flex-direction: row;
-        gap: var(--gap-s)
-    }
-
-    .prize {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        border: var(--border-sm) solid var(--dim);
-        border-radius: 1rem;
-        gap: var(--gap-s);
-        padding: var(--pad-s);
-        min-width: 6rem;
-    }
-
-    .prize-art {
-        font-family: monospace;
-        font-weight: 800;
-        letter-spacing: 0.04rem;
-        font-size: var(--font-ascii);
-        line-height: 1em;
-        white-space: pre;
-    }
-
-    .prize-name {
-        font-size: 1rem;
-        font-weight: 400;
-        user-select: text;
     }
 
     .love {
