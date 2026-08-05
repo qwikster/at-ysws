@@ -37,7 +37,7 @@ async def testrouter():
     return response
 
 @router.get("/login")
-async def login(email: str):
+async def login(email: str | None):
     state = secrets.token_urlsafe(24)
 
     params = {

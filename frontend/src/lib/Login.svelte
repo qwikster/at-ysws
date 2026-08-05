@@ -1,12 +1,18 @@
 <script>
+ import { goto } from '$app/navigation';
 
+ let email = "";
+ function login() {
+		const targetUrl = `/api/auth/login?email=${encodeURIComponent(email)}`;
+        goto(targetUrl);
+	}
 </script>
 
 <div class="login">
     <span class="rsvp-title">SIGN UP FOR @ NOW!!</span>
     <div class="inner">
-        <input class="rsvp" type="text" placeholder="me@hackclub.gay">
-        <button class="login-btn">@> </button>
+        <input class="rsvp" type="text" placeholder="me@hackclub.gay" bind:value={email} onkeydown={(e) => e.key === 'Enter' && login()}>
+        <button class="login-btn" onclick={login}>@> </button>
     </div>
 </div>
 
