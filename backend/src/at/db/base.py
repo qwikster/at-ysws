@@ -1,12 +1,18 @@
+import enum
+from typing import ClassVar
+
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase
 from typing_extensions import AsyncGenerator
 
 from at.config import config, secret
+from at.db.types import PgEnum
 
 
 class Base(DeclarativeBase):
-    pass
+    type_annotation_map: ClassVar[dict] = {
+        enum.Enum: PgEnum
+    }
 
 url = secret().db_url
 if (url) is None:

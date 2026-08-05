@@ -3,8 +3,8 @@ import random
 import string
 import sys
 
-from at import models  # noqa: F401
-from at.db import Base, engine
+from at.config import config
+from at.db import Base, engine, models  # noqa: F401
 
 target_metadata = Base.metadata
 
@@ -13,6 +13,10 @@ def genhash(chars: int = 4) -> str:
     return "".join(random.choices(string.ascii_letters + string.digits, k = chars))
 
 async def drop():
+    if not config().devmode:
+        print("this looks like a production instance!!!!")
+        print("if you're really sure, turn on backend/app.config:devmode")
+
     hash = genhash(4)
     print("This will DROP ALL TABLES!! in the database defined under .env!!")
     print(f"type '{hash}' below to confirm:")
@@ -23,6 +27,7 @@ async def drop():
         sys.exit(1)
     if input("are you sure? [y/N]").lower() != "y":
         print("no changes made")
+        sys.exit(0)
 
     print("bye bye data oyes pog goodnight")
     async with engine.begin() as db:
