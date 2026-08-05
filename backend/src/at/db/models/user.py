@@ -36,4 +36,5 @@ class User(Base):
     # Posessions
     currency: Mapped[int] = mapped_column(default = 0)
     hours: Mapped[float] = mapped_column(default = float(0))
-    
+
+    # add relationships (migrate later)

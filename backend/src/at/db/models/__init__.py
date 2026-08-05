@@ -1,3 +1,4 @@
-from at.models.user import User
+from at.db.models.session import Session
+from at.db.models.user import User
 
-__all__ = ["User"]
+__all__ = ["Session", "User"]
