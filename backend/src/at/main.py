@@ -7,7 +7,8 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-import at.models  # noqa: F401
+import at.db.models  # noqa: F401
+from at.api import auth
 from at.config import config
 from at.db import Base, engine
 
@@ -28,7 +29,7 @@ async def lifespan(app: FastAPI):
 
 def api_routes(app: FastAPI):
     # app.include_router(bnuuy.router, prefix="/api/bnuuy")
-    pass
+    app.include_router(auth.router, prefix="/api/auth")
 
 def app_routes(app: FastAPI):
     @app.get("/projects/{id}")

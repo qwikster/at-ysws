@@ -32,7 +32,6 @@ async def drop():
     print("bye bye data oyes pog goodnight")
     async with engine.begin() as db:
         await db.run_sync(Base.metadata.drop_all)
-        await db.run_sync(Base.metadata.create_all)
     print("it workied")
 
 def entry():

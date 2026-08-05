@@ -30,6 +30,7 @@ class User(Base):
     addresses: Mapped[list[Address]] = mapped_column(PydanticJSONB(Address, is_list = True), default = list)
 
     # Slack API only (needs bot key)
+    slack_id: Mapped[str | None]
     username: Mapped[str | None] # only from slack api
     pfp_url: Mapped[str | None]  # which sucks so probably not to be used
 

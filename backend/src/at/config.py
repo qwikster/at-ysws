@@ -18,6 +18,7 @@ class Secret(BaseSettings):
     db_url: str | None = None
     hca_id: str | None = None
     hca_secret: str | None = None
+    hca_uri: str | None = None
 
     airtable_key: str | None = None
     airtable_base_id: str | None = None

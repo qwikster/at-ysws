@@ -16,6 +16,16 @@ class PgEnum(SQLEnum):
         db_enum_name = f"{enum_class.__name__.lower()}_enum"
         super().__init__(enum_class, name=db_enum_name, native_enum = True, **kw)
 
+class EnumResolverMap(dict):
+    def __getitem__(self, key):
+        if isinstance(key, type) and issubclass(key, enum.Enum):
+            return PgEnum(key)
+        return super().__getitem__(key)
+
+    def __contains__(self, key):
+        if isinstance(key, type) and issubclass(key, enum.Enum):
+            return True
+        return super().__contains__(key)
 
 # ANNOTATED TYPES Mapped[timestamp]
 timestamp = Annotated[
